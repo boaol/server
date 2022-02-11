@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express")
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const { getHomePage, getUserById, update, submit } = require("../controller")
 
-module.exports = router;
+const router = express.Router()
+
+router.get("/", getHomePage)
+
+router.get("/:userId", getUserById)
+
+router.post("/update", update)
+
+router.post("/submit", submit)
+
+module.exports = router

@@ -3,12 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www ",
+    "test": "jest --coverage --coveragePathIgnorePatterns public",
+    "eslint": "eslint .",
+    "prettier": "prettier . --write"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "express-session": "^1.17.2",
+    "lowdb": "1.0.0",
+    "morgan": "~1.9.1",
+    "react": "15",
+    "react-dom": "15",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "supertest": "^6.2.2",
+    "supertest-session": "^4.1.0"
   }
 }
